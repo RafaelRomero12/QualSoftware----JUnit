@@ -95,8 +95,16 @@ public class UC01RegistraEmprestimoDeLivro {
 		boolean resultadoObtido = umEmprestimo.validaData(data);
 		//verificacao
 		assertFalse(resultadoObtido);
-		
-		
+	}
+		@Test
+		public void CT09QuandoFormatodataDeEmprestimoForInvalidaErro() {
+			//cenario
+			String data = "01-02-2018";
+			Emprestimo umEmprestimo = new Emprestimo();
+			//acao
+			boolean resultadoObtido = umEmprestimo.validaData(data);
+			//verificacao
+			assertFalse(resultadoObtido);
 		
 	}
 	@Test
